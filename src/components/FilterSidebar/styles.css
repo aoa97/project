@@ -1,0 +1,54 @@
+.filter-sidebar {
+  flex-basis: 260px;
+}
+
+.filter-sidebar__heading {
+  margin-top: 1.3rem;
+}
+
+.filter-sidebar .card {
+  margin-top: 2.5rem;
+  padding: 2.1rem;
+}
+
+.filter-sidebar__item {
+  margin-top: 3.5rem;
+}
+
+.filter-sidebar__item:first-child {
+  margin-top: 0;
+}
+
+.filter-sidebar__item h5 {
+  margin-bottom: 1.4rem;
+}
+
+.sidebar__heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+  .filter-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: scroll;
+    z-index: 5;
+    transform: translateX(-50rem);
+    transition: 0.4s transform ease;
+  }
+
+  .filter-sidebar .card {
+    margin: 0;
+  }
+
+  .filter-sidebar__heading {
+    display: none;
+  }
+
+  .filter-sidebar.show {
+    transform: translateX(0);
+  }
+}

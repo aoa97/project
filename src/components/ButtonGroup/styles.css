@@ -1,0 +1,20 @@
+.btn-group {
+  border: 1px solid var(--primary-color);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 3.7rem;
+}
+
+.btn-group button {
+  padding: 0.7rem 1.4rem;
+}
+
+.btn-group button.active {
+  background-color: rgba(115, 103, 240, 0.2);
+}
+
+.btn-group button:nth-of-type(odd) {
+  border-right: .1rem solid var(--primary-color);
+}

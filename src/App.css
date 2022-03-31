@@ -1,0 +1,15 @@
+main {
+  margin-left: 260px; /* Push to left as much as space taken by menu */
+  padding: 1.8rem 2.8rem;
+}
+
+main .content {
+  margin-top: 2.8rem;
+}
+
+@media (max-width: 1199px) {
+  main {
+    margin-left: 0;
+  }
+}
+

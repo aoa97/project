@@ -1,0 +1,14 @@
+.menu__links__item {
+  padding: 1rem 1.5rem;
+  margin: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  column-gap: 1.54rem;
+  cursor: pointer;
+}
+
+.menu__links__item span {
+  font-size: 1.54rem;
+  color: var(--menu-text-color);
+  font-weight: 400;
+}

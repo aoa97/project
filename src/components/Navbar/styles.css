@@ -1,0 +1,131 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.12rem 2.1rem;
+  border-radius: var(--radius);
+  background-color: var(--menu-color);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 1.8rem;
+  box-shadow: var(--shadow);
+  height: 6rem;
+  z-index: 2;
+}
+
+nav svg {
+  width: 2.1rem;
+  height: 2.1rem;
+}
+
+nav .nav__Search {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.nav__left {
+  display: flex;
+  align-items: center;
+  column-gap: 1.7rem;
+}
+
+.nav__left__icons {
+  display: flex;
+  align-items: center;
+  column-gap: 1.4rem;
+}
+
+.nav__right {
+  display: flex;
+  align-items: center;
+  column-gap: 1.3rem;
+}
+
+.nav__lang__item {
+  display: flex;
+  align-items: center;
+  column-gap: 0.7rem;
+}
+
+.nav__lang__item span {
+  font-size: 1.4rem;
+}
+
+.nav__tools {
+  display: flex;
+  align-items: center;
+  column-gap: 1.4rem;
+}
+
+.nav__user {
+  display: flex;
+  align-items: center;
+  column-gap: 1.1rem;
+}
+
+.nav__user__details h5 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.8rem;
+}
+
+.nav__user__details span {
+  font-size: 1.1667rem;
+  float: right;
+}
+
+.nav__user__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background: #eeedfd;
+  position: relative;
+}
+
+.nav__user__avatar img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.nav__user__avatar .active {
+  padding: .28rem;
+  border: .1rem solid #FFF;
+  background-color: #28c76f;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.nav__left__drawer {
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .nav__left__drawer {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .nav__tools .iconBtn:first-child {
+    /* Dark/Light mode icon*/
+    display: none;
+  }
+  .nav__left__icons {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .nav__user__details {
+    display: none;
+  }
+}

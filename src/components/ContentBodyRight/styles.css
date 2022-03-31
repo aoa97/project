@@ -1,0 +1,27 @@
+.contentBody__right {
+  flex: 1;
+}
+
+.contentBody__right__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+
+.contentBody__right__header .filter-options {
+  display: flex;
+  align-items: center;
+  column-gap: 1.4rem;
+}
+
+@media (max-width: 991px) {
+  .filter-resultsNo {
+    display: none;
+  }
+
+  .filter-sidebar-drawer {
+    display: block !important;
+    cursor: pointer;
+  }
+}

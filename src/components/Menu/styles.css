@@ -1,0 +1,118 @@
+.menu {
+  min-width: 260px;
+  padding: 2.4rem 0;
+  background: var(--menu-color);
+  color: var(--menu-text-color);
+  position: fixed;
+}
+
+.menu__brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.4rem 2rem 2.296rem;
+}
+
+.menu__brand__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1.4rem;
+}
+
+.menu__brand__logo span {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 2.03rem;
+}
+
+.menu__links {
+  max-height: 100vh;
+  padding-bottom: 2rem;
+  overflow: scroll;
+}
+
+.menu__links::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.menu__links::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #888;
+}
+
+.menu__links .badge {
+  position: static;
+  background-color: rgba(255, 159, 67, 0.12);
+  color: #ff9f43;
+}
+
+.menu__links__item.dash-toggle {
+  column-gap: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu__links__section {
+  margin-top: 3.2004rem;
+}
+
+.section__heading {
+  padding: 0 1.5rem;
+  margin: 0 1.5rem;
+  margin-bottom: 1.4rem;
+  font-size: 1.26rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--menu-heading-color);
+}
+
+/* Toggle Menu */
+.menu__links__section.toggle {
+  margin-top: 0;
+  opacity: 0;
+  transition: 0.4s opacity ease;
+}
+.menu__links__section.toggle .menu__links__item {
+  display: none;
+}
+.show {
+  opacity: 1 !important;
+}
+.menu__links__section.toggle.show .menu__links__item {
+  display: flex;
+}
+.toggle-icon-rotate {
+  transform: rotate(90deg);
+}
+
+.menu__close__icon {
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .menu {
+    transform: translateX(-50rem);
+    transition: 0.4s transform ease;
+  }
+
+  .menu.show {
+    /* width: 50%; */
+    transform: translateX(0);
+    z-index: 3;
+  }
+
+  .menu__collapse__icon {
+    display: none;
+  }
+
+  .menu__close__icon {
+    cursor: pointer;
+    display: flex !important;
+  }
+
+  .menu__close__icon svg {
+    stroke: var(--primary-color);
+  }
+}

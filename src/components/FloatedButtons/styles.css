@@ -1,0 +1,50 @@
+.btn-floated {
+  font-weight: 500;
+  border-radius: 5.012px;
+  position: fixed;
+  z-index: 2;
+}
+
+.btn-floated.buyNow {
+  padding: 1.1rem 2.1rem;
+  box-shadow: rgb(234, 84, 85) 0px 1px 20px 1px;
+  background-color: #ea5455;
+  color: #fff;
+  bottom: 5%;
+  right: 7.9rem;
+}
+
+.btn-floated.up {
+  padding: 1.1rem 1.304rem;
+  background-color: var(--primary-color);
+  bottom: 5%;
+  right: 3rem;
+  opacity: 0;
+  transition: 0.4s opacity ease;
+}
+
+.btn-floated.settings {
+  padding: 1.1rem 1.304rem;
+  background-color: var(--primary-color);
+  bottom: 50vh;
+  right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-floated.settings svg {
+  animation: spin 1s linear infinite;
+  stroke: #FFF;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

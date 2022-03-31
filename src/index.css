@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+
+:root {
+  /* Colors */
+  --primary-color: #7367f0;
+  --body-color: #f8f8f8;
+  --menu-color: #fff;
+  --menu-heading-color: #a6a4b0;
+  --menu-text-color: #625f6e;
+  --menu-active-text-color: #565360;
+  --menu-active-color: #f5f5f5;
+  --content-heading-color: #636363;
+  --content-filter-text-color: #5e5873;
+  --card-wishlist-text-color: #2a2e30;
+  --card-wishlist-hover-color: #eee;
+  --nav-text-color: #6e6b7b;
+  --text-color-1: #6e6b7b; /* nav-lang card-title-desc footer pagin */
+  --radius: 0.5992rem;
+  --shadow: 0 2px 8px 0 rgb(34 41 47 / 14%);
+}
+body.dark {
+  /* Colors */
+  --body-color: #161d31;
+  --menu-color: #283046;
+  --menu-heading-color: #a6a4b0;
+  --menu-text-color: #d0d2d6;
+  --menu-active-text-color: #d0d2d6;
+  --menu-active-color: #161d31;
+  --content-heading-color: #d0d2d6;
+  --content-filter-text-color: #d0d2d6;
+  --card-wishlist-text-color: #fff;
+  --card-wishlist-hover-color: #161d31;
+  --nav-text-color: #d0d2d6;
+  --text-color-1: #b4b7bd; /* nav-lang card-title-desc footer pagin */
+}
+
+* {
+  /* Resets */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-size: 1.4rem;
+  color: var(--text-color-1);
+  background-color: var(--body-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  background: none;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+
+.badge {
+  color: #fff;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1004rem;
+  font-weight: 600;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 0.78rem;
+}
+
+input {
+  accent-color: var(--primary-color);
+  outline: none;
+}
+
+input[type="text"],
+input[type="search"] {
+  border: 0;
+  width: 100%;
+  padding: 1.5rem 0 1.5rem 1.75rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: var(--menu-color);
+}
+input[type="text"]::placeholder,
+input[type="search"]::placeholder {
+  font-family: "Montserrat", sans-serif;
+  color: #d8d8de;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+  outline: 0;
+  appearance: none;
+  font: inherit;
+  color: currentColor;
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 0.1rem solid #ddd;
+  border-radius: 50%;
+}
+input[type="radio"]:checked {
+  background-color: var(--primary-color);
+  box-shadow: var(--shadow);
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2rem;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  column-gap: 0.8rem;
+}
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 16.6rem;
+  padding: 1rem 0;
+  background-color: #fff;
+  border-radius: 0.5012rem;
+  box-shadow: 0 5px 25px rgb(34 41 47 / 10%);
+  animation-name: dropdown-animation;
+  animation-duration: 0.3s;
+}
+
+.dropdown-item {
+  margin: 0 !important;
+  padding: 0.91rem 1.792rem !important;
+  display: flex;
+  align-items: center;
+  column-gap: 0.7rem !important;
+}
+
+.dropdown-item:hover {
+  color: var(--primary-color);
+  background-color: var(--body-color);
+}
+
+.dropdown-item span {
+  font-size: 1.4rem !important;
+}
+
+.dropdown-item svg {
+  width: 16px;
+  height: 16px;
+}
+
+.dropdown-divider {
+  border-top: 0.1rem solid rgba(34, 41, 47, 0.08);
+  margin: 0.7rem 0;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.range-minmax {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+@keyframes dropdown-animation {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,24 @@
+.contentBody {
+  margin-top: 1.4rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2.8rem;
+}
+
+.contentBody h5 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+@media (max-width: 991px) {
+  .contentBody {
+    display: block;
+  }
+}
+
+@media (max-width: 575px) {
+  .contentBody {
+    display: block;
+  }
+}
